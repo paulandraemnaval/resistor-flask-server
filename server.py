@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 model = YOLO("./assets/model/my_model.pt")
-model.to("cpu")
+model.fuse()
 
 CLASS_NAMES = [
     "resistor", "1K Ohm", "1M Ohm", "2K Ohm", "2 Ohm", "3.9K Ohm", "4.7K Ohm", "5.1K Ohm", "5.6K Ohm",
@@ -65,7 +65,7 @@ def detect():
     else:
         font_scale = FONT_SCALE
     
-    results = model.predict(image_np, device="cpu")
+    results = model(image_np, device="cpu")
 
     for r in results:
         for box in r.boxes:
