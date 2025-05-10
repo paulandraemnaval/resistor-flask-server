@@ -10,6 +10,8 @@ app = Flask(__name__)
 CORS(app)
 
 model = YOLO("./assets/model/my_model.pt")
+model.fuse()
+model.to("cpu")
 
 CLASS_NAMES = [
     "resistor", "1K Ohm", "1M Ohm", "2K Ohm", "2 Ohm", "3.9K Ohm", "4.7K Ohm", "5.1K Ohm", "5.6K Ohm",
