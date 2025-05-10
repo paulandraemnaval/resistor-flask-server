@@ -11,9 +11,9 @@ seaborn
 opencv-python
 
 # Torch & vision
-torch==2.2.2
-torchvision==0.15.2
-torchaudio==2.2.2
+torch
+torchvision
+torchaudio
 
 # Optional but common tools
 tqdm
