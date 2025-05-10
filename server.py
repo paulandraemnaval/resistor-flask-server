@@ -10,7 +10,6 @@ app = Flask(__name__)
 CORS(app)
 
 model = YOLO("./assets/model/my_model.pt")
-model.fuse()
 model.to("cpu")
 
 CLASS_NAMES = [
@@ -66,7 +65,7 @@ def detect():
     else:
         font_scale = FONT_SCALE
     
-    results = model(image_np)
+    results = model.predict(image_np, device="cpu")
 
     for r in results:
         for box in r.boxes:
