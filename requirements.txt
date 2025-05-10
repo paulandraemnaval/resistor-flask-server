@@ -18,3 +18,4 @@ torchaudio
 # Optional but common tools
 tqdm
 psutil
+flask-cors
