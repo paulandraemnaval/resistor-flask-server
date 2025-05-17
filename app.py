@@ -1,6 +1,5 @@
 from flask import Flask, request, send_file, jsonify, make_response
 from ultralytics import YOLO
-import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import io
 import os
