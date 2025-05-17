@@ -3,3 +3,4 @@ flask-cors
 ultralytics
 numpy
 Pillow
+gunicorn
