@@ -1,23 +1,5 @@
-Flask==3.1.0
-gunicorn==23.0.0
-ultralytics==8.3.130
-onnxruntime
-pillow
-
-# Data & plotting (safe versions)
-pandas
-matplotlib
-seaborn
-
-# Image processing
-opencv-python
-
-# Torch & vision
-torch
-torchvision
-torchaudio
-
-# Optional but common tools
-tqdm
-psutil
+flask
 flask-cors
+ultralytics
+numpy
+Pillow
